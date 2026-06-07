@@ -1,43 +1,103 @@
-import { motion } from 'framer-motion';
-import Button from '../ui/Button';
-import { fadeInUp, staggerChildren } from '../../utils/animations';
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ChevronDown } from 'lucide-react';
 
 export default function HeroSection() {
-  return (
-    <section id="hero" className="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-brand-off-white">
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2940&auto=format&fit=crop')] bg-cover bg-center opacity-40 mix-blend-multiply" />
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-off-white via-brand-off-white/80 to-transparent" />
-      </div>
+  const [isScrolled, setIsScrolled] = useState(false);
 
-      <div className="relative z-10 max-w-[1280px] mx-auto px-6 w-full flex flex-col md:flex-row items-center gap-12">
-        <motion.div
-          variants={staggerChildren}
-          initial="hidden"
-          animate="visible"
-          className="flex-1 max-w-2xl pt-12 md:pt-0"
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return (
+    <section className="relative h-screen w-full overflow-hidden bg-brand-dark">
+      {/* Background Image */}
+      <img
+        src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=2070&auto=format&fit=crop"
+        alt="Beautiful modern kitchen with premium cookware"
+        className="absolute inset-0 w-full h-full object-cover select-none"
+      />
+
+      {/* Fix 4: Directional overlay gradient */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background: 'linear-gradient(to right, rgba(10,8,5,0.82) 0%, rgba(10,8,5,0.55) 45%, rgba(10,8,5,0.05) 100%)'
+        }}
+      />
+
+      {/* Fix 5: Content Container anchored to bottom-left */}
+      <div className="absolute bottom-14 left-12 max-w-lg z-10 text-left">
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: 'easeOut', delay: 0.2 }}
+          className="font-body text-xs font-normal tracking-widest uppercase text-brand-orange mb-3"
         >
-          <motion.div variants={fadeInUp} className="mb-4">
-            <span className="inline-block py-1.5 px-4 bg-brand-accent/10 text-brand-accent font-bold uppercase tracking-widest text-xs rounded-full">
-              New Collection 2026
-            </span>
-          </motion.div>
-          <motion.h1 variants={fadeInUp} className="text-5xl md:text-7xl font-display font-bold text-brand-dark leading-[1.1] mb-6">
-            Elevate Your <span className="text-brand-accent italic font-normal">Kitchen</span> Everyday.
-          </motion.h1>
-          <motion.p variants={fadeInUp} className="text-lg md:text-xl text-text-secondary mb-10 max-w-lg leading-relaxed">
-            Discover premium cookware, smart storage, and aesthetic dining essentials curated for the modern Indian home.
-          </motion.p>
-          <motion.div variants={fadeInUp} className="flex flex-wrap gap-4">
-            <Button size="lg" onClick={() => document.getElementById('shop-section').scrollIntoView()}>
-              Shop Catalogue
-            </Button>
-            <Button variant="outline" size="lg" onClick={() => document.getElementById('about-section').scrollIntoView()}>
-              Our Story
-            </Button>
-          </motion.div>
+          Trusted by Ghaziabad families since 2001
+        </motion.p>
+
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: 'easeOut', delay: 0.4 }}
+          className="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight mb-4"
+        >
+          Kitchenware that<br /> feels like home.
+        </motion.h1>
+
+        {/* Fix 6: Subtitle text with EB Garamond Normal */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: 'easeOut', delay: 0.6 }}
+          className="font-body text-base font-normal text-white/75 leading-relaxed mb-6 max-w-sm"
+        >
+          Explore our handpicked collection of premium cookware, bakeware, and essentials curated for local kitchens.
+        </motion.p>
+
+        {/* Fix 6: CTA Buttons with sharp corners and clean hierarchy */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: 'easeOut', delay: 0.8 }}
+          className="flex items-center gap-3"
+        >
+          <Link
+            to="/products"
+            className="inline-block bg-brand-orange text-white font-body text-sm font-medium tracking-[0.15em] uppercase px-6 py-3 rounded-none transition-colors duration-200 hover:bg-brand-orange-dark"
+          >
+            Explore Products
+          </Link>
+          <Link
+            to="/about"
+            className="inline-block bg-transparent text-white border border-white/55 font-body text-sm font-medium tracking-[0.15em] uppercase px-6 py-3 rounded-none transition-colors duration-200 hover:bg-white/10"
+          >
+            Our Story
+          </Link>
         </motion.div>
       </div>
+
+      {/* Bouncing Scroll Indicator */}
+      <AnimatePresence>
+        {!isScrolled && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-1 text-white/50"
+          >
+            <span className="text-[10px] uppercase tracking-widest font-body font-medium">Scroll</span>
+            <ChevronDown className="w-5 h-5 animate-bounce" />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }

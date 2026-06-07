@@ -1,34 +1,25 @@
 @import "tailwindcss";
-@import "@fontsource/playfair-display/400.css";
-@import "@fontsource/playfair-display/700.css";
-@import "@fontsource/playfair-display/400-italic.css";
-@import "@fontsource/playfair-display/700-italic.css";
-@import "@fontsource/dm-sans/400.css";
-@import "@fontsource/dm-sans/500.css";
-@import "@fontsource/dm-sans/700.css";
 
 @theme {
-  --color-brand-accent: #D4622A;
-  --color-brand-accent-hover: #B8501F;
-  --color-brand-accent-light: #FDF0EA;
-  --color-brand-dark: #1C1410;
-  --color-brand-off-white: #F7F5F2;
+  --color-brand-white: #FFFFFF;
+  --color-brand-blue: #1A2B4A;
+  --color-brand-orange: #D4622A;
+  --color-brand-orange-dark: #C4541F;
+  --color-brand-blue-light: #2D4A7A;
+  --color-brand-grey: #F3F4F6;
+  --color-brand-dark: #111827;
 
-  --color-text-primary: #1A1A1A;
-  --color-text-secondary: #6B6B6B;
-  --color-text-muted: #9E9E9E;
+  --color-border: #E5E7EB;
 
-  --color-border: #E8E4DF;
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-body: "EB Garamond", Georgia, serif;
 
-  --font-display: "Playfair Display", serif;
-  --font-body: "DM Sans", sans-serif;
-
-  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.07);
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.08);
   --shadow-card-hover: 0 12px 32px rgba(0, 0, 0, 0.13);
   --shadow-drawer: 0 0 60px rgba(0, 0, 0, 0.18);
 
-  --radius-card: 10px;
-  --radius-pill: 50px;
+  --radius-card: 0px;
+  --radius-pill: 9999px;
 }
 
 /* Base Styles */
@@ -39,11 +30,18 @@ html {
 }
 
 body {
-  font-family: var(--font-body);
-  color: var(--color-text-primary);
-  background-color: #ffffff;
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 18px;
+  font-weight: 400;
+  background-color: var(--color-brand-white);
+  color: var(--color-brand-dark);
   line-height: 1.6;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
 }
 
 /* Scrollbar styling */
@@ -117,10 +115,10 @@ body {
   align-items: center;
   justify-content: center;
   padding: 0 20px;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.02em;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
   color: rgba(255, 255, 255, 0.75);
   background: none;
   border: none;

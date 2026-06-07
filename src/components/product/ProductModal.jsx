@@ -1,19 +1,10 @@
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { X, Minus, Plus, Check } from 'lucide-react';
+import { X, MapPin } from 'lucide-react';
 import PropTypes from 'prop-types';
-import Button from '../ui/Button';
-import StarRating from '../ui/StarRating';
-import { formatPrice } from '../../utils/formatPrice';
-import { modalScale } from '../../utils/animations';
 import { PRODUCTS } from '../../data/products';
-import useCartStore from '../../store/useCartStore';
-import { useToastStore } from '../ui/Toast';
 
 export default function ProductModal({ productId, onClose }) {
-  const [qty, setQty] = useState(1);
-  const addItem = useCartStore((s) => s.addItem);
-  const addToast = useToastStore((s) => s.addToast);
   const product = PRODUCTS.find((p) => p.id === productId);
 
   useEffect(() => {
@@ -28,121 +19,92 @@ export default function ProductModal({ productId, onClose }) {
     };
   }, [onClose]);
 
-  const handleAddToCart = useCallback(() => {
-    if (!product || !product.inStock) return;
-    addItem(product, qty);
-    addToast(`Added ${qty}x ${product.name} to cart!`, 'success');
-    onClose();
-  }, [product, qty, addItem, addToast, onClose]);
-
   if (!product) return null;
 
   return (
     <div className="fixed inset-0 z-[1000] flex items-center justify-center p-4">
+      {/* Backdrop */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+        className="absolute inset-0 bg-brand-dark/70 backdrop-blur-sm"
         onClick={onClose}
       />
+
+      {/* Modal Container */}
       <motion.div
-        variants={modalScale}
-        initial="hidden"
-        animate="visible"
-        exit="exit"
-        className="relative bg-white rounded-[var(--radius-card)] shadow-drawer w-full max-w-4xl max-h-[90vh] overflow-y-auto z-10"
+        initial={{ opacity: 0, scale: 0.95, y: 20 }}
+        animate={{ opacity: 1, scale: 1, y: 0 }}
+        exit={{ opacity: 0, scale: 0.95, y: 20 }}
+        transition={{ type: 'spring', duration: 0.4 }}
+        className="relative bg-brand-white w-full max-w-4xl max-h-[90vh] overflow-y-auto z-10 rounded-none border border-brand-grey flex flex-col md:flex-row shadow-2xl"
         role="dialog"
         aria-modal="true"
       >
+        {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 z-20 w-10 h-10 bg-white/80 backdrop-blur-md rounded-full flex items-center justify-center text-text-primary hover:bg-brand-off-white transition-colors cursor-pointer shadow-card"
+          className="absolute top-4 right-4 z-20 p-2 bg-brand-white hover:bg-brand-orange hover:text-white transition-colors duration-200 cursor-pointer border border-brand-grey"
           aria-label="Close modal"
         >
           <X className="w-5 h-5" />
         </button>
 
-        <div className="flex flex-col md:flex-row">
-          <div className="w-full md:w-1/2 bg-brand-off-white aspect-square md:aspect-auto md:min-h-full p-8 flex items-center justify-center">
-            <img
-              src={product.image}
-              alt={product.name}
-              className="w-full h-full object-contain mix-blend-multiply"
-            />
-          </div>
-          <div className="w-full md:w-1/2 p-8 lg:p-10 flex flex-col">
-            <span className="text-xs uppercase font-bold tracking-wider text-text-muted mb-2">
+        {/* Product Image Column */}
+        <div className="w-full md:w-1/2 bg-brand-grey aspect-square md:aspect-auto md:min-h-[500px] flex items-center justify-center p-8">
+          <img
+            src={product.image}
+            alt={product.name}
+            className="max-h-[400px] w-full object-contain select-none mix-blend-multiply"
+          />
+        </div>
+
+        {/* Product Details Column */}
+        <div className="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-between">
+          <div>
+            <span className="text-xs uppercase tracking-widest text-brand-orange font-body font-normal block mb-2">
               {product.category}
             </span>
-            <h2 className="text-2xl md:text-3xl font-display font-bold text-text-primary mb-3">
+            <h2 className="text-3xl font-display font-semibold text-brand-dark leading-tight mb-4">
               {product.name}
             </h2>
-            <StarRating rating={product.rating} count={product.reviewCount} />
-            <div className="flex items-center gap-3 my-6">
-              <span className="text-3xl font-bold text-brand-accent">
-                {formatPrice(product.price)}
-              </span>
-              {product.originalPrice && (
-                <span className="text-lg line-through text-text-muted">
-                  {formatPrice(product.originalPrice)}
-                </span>
-              )}
-            </div>
-            <p className="text-text-secondary leading-relaxed mb-8">
+            <p className="text-brand-dark/70 font-body text-base font-normal leading-relaxed mb-6">
               {product.description}
             </p>
-            <div className="mb-8">
-              <h4 className="text-sm uppercase tracking-wider text-text-primary font-bold mb-4">
-                Key Features
-              </h4>
-              <ul className="space-y-2">
-                {product.features.map((feature, i) => (
-                  <motion.li
-                    key={i}
-                    initial={{ opacity: 0, x: -10 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.2 + i * 0.05 }}
-                    className="flex items-start gap-2 text-text-secondary text-sm"
-                  >
-                    <Check className="w-4 h-4 text-brand-accent shrink-0 mt-0.5" />
-                    <span>{feature}</span>
-                  </motion.li>
-                ))}
-              </ul>
-            </div>
-            <div className="mt-auto flex items-center gap-4 pt-6 border-t border-border">
-              <div className="flex items-center border border-border rounded-[var(--radius-card)] h-12 w-32 shrink-0">
-                <motion.button
-                  whileTap={{ scale: 0.9 }}
-                  onClick={() => setQty((q) => Math.max(1, q - 1))}
-                  className="flex-1 h-full flex items-center justify-center text-text-primary hover:bg-brand-off-white cursor-pointer rounded-l-[var(--radius-card)]"
-                  aria-label="Decrease quantity"
-                  disabled={!product.inStock}
-                >
-                  <Minus className="w-4 h-4" />
-                </motion.button>
-                <span className="flex-1 text-center font-medium select-none">
-                  {qty}
-                </span>
-                <motion.button
-                  whileTap={{ scale: 0.9 }}
-                  onClick={() => setQty((q) => q + 1)}
-                  className="flex-1 h-full flex items-center justify-center text-text-primary hover:bg-brand-off-white cursor-pointer rounded-r-[var(--radius-card)]"
-                  aria-label="Increase quantity"
-                  disabled={!product.inStock}
-                >
-                  <Plus className="w-4 h-4" />
-                </motion.button>
+
+            {product.features && product.features.length > 0 && (
+              <div className="mb-8">
+                <h4 className="text-xs uppercase tracking-widest text-brand-dark font-body font-medium mb-3">
+                  Key Specifications
+                </h4>
+                <ul className="space-y-2 pl-0 list-none">
+                  {product.features.map((feature, i) => (
+                    <li key={i} className="flex items-start gap-2 text-brand-dark/70 text-sm font-body font-normal">
+                      <span className="text-brand-orange font-bold">•</span>
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <Button
-                onClick={handleAddToCart}
-                variant="primary"
-                className="flex-1 h-12"
-                disabled={!product.inStock}
-              >
-                {product.inStock ? 'Add to Cart' : 'Out of Stock'}
-              </Button>
+            )}
+          </div>
+
+          {/* Shop Visit Prompt (Bottom) */}
+          <div className="border-t border-brand-grey pt-6 mt-6">
+            <div className="bg-brand-blue/5 border-l-4 border-brand-orange p-4 flex gap-3 items-start">
+              <MapPin className="w-5 h-5 text-brand-orange shrink-0 mt-0.5" />
+              <div>
+                <p className="font-display text-sm font-medium text-brand-blue uppercase tracking-[0.15em] mb-1">
+                  How to Buy
+                </p>
+                <p className="text-sm text-brand-dark/80 leading-relaxed font-body font-normal">
+                  This product is part of our in-store collection. Visit our showroom in Ghaziabad to view and purchase.
+                </p>
+                <p className="text-xs text-brand-orange font-medium mt-2 font-body tracking-wider uppercase">
+                  📍 Shop No. 12, Main Market, Ghaziabad
+                </p>
+              </div>
             </div>
           </div>
         </div>

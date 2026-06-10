@@ -6,32 +6,38 @@ const CATEGORIES_SHOWCASE = [
   {
     id: 'cookware',
     label: 'Cookware',
-    image: 'https://images.unsplash.com/photo-1584269600464-37b1b58a9fe7?q=80&w=600&auto=format&fit=crop',
+    image: '/images/categories/cookware.jpg',
+    alt: 'Premium non-stick cookware pot boiling pasta with water being poured from an electric kettle',
   },
   {
     id: 'bakeware',
     label: 'Bakeware',
-    image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=600&auto=format&fit=crop',
+    image: '/images/categories/bakeware.png',
+    alt: 'Assorted baking pans with freshly baked bread loaves, muffins, and donuts',
   },
   {
     id: 'storage',
     label: 'Storage',
-    image: 'https://images.unsplash.com/photo-1595348020949-87cdfcd44174?q=80&w=600&auto=format&fit=crop',
+    image: '/images/categories/storage.png',
+    alt: 'Stackable clear airtight plastic food storage containers filled with fresh ingredients on a metal kitchen counter',
   },
   {
     id: 'tools',
     label: 'Kitchen Tools',
-    image: 'https://images.unsplash.com/photo-1599940824399-b87987ceb72a?q=80&w=600&auto=format&fit=crop',
+    image: '/images/categories/tools.png',
+    alt: 'Collection of kitchen tools including wooden spoons, spatula, chef knife, whisk, and cast iron skillet on a cutting board',
   },
   {
     id: 'dining',
     label: 'Dining & Serveware',
-    image: 'https://images.unsplash.com/photo-1536304997881-a372c179924b?q=80&w=600&auto=format&fit=crop',
+    image: '/images/categories/dining.png',
+    alt: 'Elegant dining table setting with plates, bowls, glassware, and cutlery ready for a meal',
   },
   {
     id: 'appliances',
     label: 'Small Appliances',
-    image: 'https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?q=80&w=600&auto=format&fit=crop',
+    image: '/images/categories/appliances.png',
+    alt: 'Modern small kitchen appliances including an air fryer, coffee makers, and a blender lined up on a kitchen counter',
   },
 ];
 
@@ -75,7 +81,7 @@ export default function FeaturedCategories() {
               {/* Category Image */}
               <img
                 src={cat.image}
-                alt={cat.label}
+                alt={cat.alt || cat.label}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 select-none"
               />
 

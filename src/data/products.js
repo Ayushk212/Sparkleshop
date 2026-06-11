@@ -20,7 +20,7 @@ export const PRODUCTS = [
       "Dishwasher safe",
       "Heat-resistant handle"
     ],
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Wok_cooking.jpg/960px-Wok_cooking.jpg"
+    "image": "/images/products/product-1.png"
   },
   {
     "id": 2,
@@ -42,7 +42,7 @@ export const PRODUCTS = [
       "Durable safety valves",
       "Induction & gas compatible"
     ],
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Pressure_cooker.jpg/960px-Pressure_cooker.jpg"
+    "image": "/images/products/product-2.png"
   },
   {
     "id": 3,
@@ -64,7 +64,7 @@ export const PRODUCTS = [
       "Even heat retention",
       "Lasts for generations"
     ],
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Tava.JPG/960px-Tava.JPG"
+    "image": "/images/products/product-3.png"
   },
   {
     "id": 4,
@@ -86,7 +86,7 @@ export const PRODUCTS = [
       "Rustproof premium build",
       "Stay-cool handles"
     ],
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Kupferkasserolle_Stielkasserolle_16_cm_Casserole.jpg/960px-Kupferkasserolle_Stielkasserolle_16_cm_Casserole.jpg"
+    "image": "/images/products/product-4.png"
   },
   {
     "id": 5,
@@ -108,7 +108,7 @@ export const PRODUCTS = [
       "Induction bottom",
       "Premium non-stick interior"
     ],
-    "image": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Pfanne_%28Edelstahl%29.jpg"
+    "image": "/images/products/product-5.png"
   },
   {
     "id": 6,
@@ -130,7 +130,7 @@ export const PRODUCTS = [
       "Premium stainless steel body",
       "Easy pour spout design"
     ],
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Kupferkasserolle_Stielkasserolle_16_cm_Casserole.jpg/960px-Kupferkasserolle_Stielkasserolle_16_cm_Casserole.jpg"
+    "image": "/images/products/product-6.png"
   },
   {
     "id": 7,
@@ -152,7 +152,7 @@ export const PRODUCTS = [
       "BPA-free acrylic material",
       "Stackable modular shape"
     ],
-    "image": "/images/products/airtight_containers.jpg"
+    "image": "/images/products/product-7.png"
   },
   {
     "id": 8,
@@ -174,7 +174,7 @@ export const PRODUCTS = [
       "Transparent spice views",
       "Compact spice organization"
     ],
-    "image": "/images/products/masala_rack.jpg"
+    "image": "/images/products/product-8.png"
   },
   {
     "id": 9,
@@ -196,7 +196,7 @@ export const PRODUCTS = [
       "Wall mounts included",
       "Keeps cereals fresh"
     ],
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/NCI_Visuals_Food_Meal_Breakfast.jpg/960px-NCI_Visuals_Food_Meal_Breakfast.jpg"
+    "image": "/images/products/product-9.png"
   },
   {
     "id": 10,
@@ -218,7 +218,7 @@ export const PRODUCTS = [
       "Durable shatter-free plastic",
       "Saves fridge space"
     ],
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Open_refrigerator_with_food_at_night.jpg/960px-Open_refrigerator_with_food_at_night.jpg"
+    "image": "/images/products/product-10.png"
   },
   {
     "id": 11,
@@ -240,7 +240,7 @@ export const PRODUCTS = [
       "Heat preservation",
       "100% leak-proof lids"
     ],
-    "image": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Dabba.jpg"
+    "image": "/images/products/product-11.png"
   },
   {
     "id": 12,
@@ -262,7 +262,7 @@ export const PRODUCTS = [
       "Air ventilation holes",
       "Elegant kitchen look"
     ],
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Breadbox.jpg/960px-Breadbox.jpg"
+    "image": "/images/products/product-12.png"
   },
   {
     "id": 13,
@@ -284,7 +284,7 @@ export const PRODUCTS = [
       "Heat safe carbon steel",
       "BPA free coating"
     ],
-    "image": "/images/products/cake_tins.png"
+    "image": "/images/products/product-13.png"
   },
   {
     "id": 14,
@@ -306,7 +306,7 @@ export const PRODUCTS = [
       "Oven, microwave, freezer safe",
       "Dishwasher safe cleanup"
     ],
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Cupcake-tin.jpg/960px-Cupcake-tin.jpg"
+    "image": "/images/products/product-14.png"
   },
   {
     "id": 15,
@@ -328,7 +328,7 @@ export const PRODUCTS = [
       "Quick release coating",
       "Perfect for cake and bread"
     ],
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Loaf_pans.JPG/960px-Loaf_pans.JPG"
+    "image": "/images/products/product-15.png"
   },
   {
     "id": 16,
@@ -350,7 +350,7 @@ export const PRODUCTS = [
       "Rustproof properties",
       "Raised outer handling rims"
     ],
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/USS_John_C._Stennis_baker.jpg/960px-USS_John_C._Stennis_baker.jpg"
+    "image": "/images/products/product-16.png"
   },
   {
     "id": 17,
@@ -372,7 +372,7 @@ export const PRODUCTS = [
       "Grid pattern ventilation",
       "Oven safe up to 250C"
     ],
-    "image": "/images/products/cooling_rack.png"
+    "image": "/images/products/product-17.png"
   },
   {
     "id": 18,
@@ -394,7 +394,7 @@ export const PRODUCTS = [
       "Interlocking sealing band",
       "Warp-resistant carbon steel"
     ],
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/SpringformPanSpring.jpg/960px-SpringformPanSpring.jpg"
+    "image": "/images/products/product-18.png"
   },
   {
     "id": 19,
@@ -416,7 +416,7 @@ export const PRODUCTS = [
       "100% melamine material",
       "Microwave safe reheat"
     ],
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Botanical_plate_with_spray_of_fruiting_Indian_Bean_Tree_MET_DP-1687-038_%28cropped%29.jpg/960px-Botanical_plate_with_spray_of_fruiting_Indian_Bean_Tree_MET_DP-1687-038_%28cropped%29.jpg"
+    "image": "/images/products/product-19.png"
   },
   {
     "id": 20,
@@ -438,7 +438,7 @@ export const PRODUCTS = [
       "Perfect food display",
       "Stainless and rust-free"
     ],
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/China%2C_Jiangxi_province%2C_Jingdezhen%2C_Ming_dynasty_%281368-1644%29%2C_Xuande_mark_-_Bowl_with_Decoration_of_the_%22Three_Friends%22_-_1953.631_-_Cleveland_Museum_of_Art.tif/lossy-page1-960px-thumbnail.tif.jpg"
+    "image": "/images/products/product-20.png"
   },
   {
     "id": 21,
@@ -460,7 +460,7 @@ export const PRODUCTS = [
       "Elegant dining aesthetic",
       "Eco-friendly retail build"
     ],
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Salad_bowl%2C_Chantilly_Porcelain_Factory%2C_c._1735-1740%2C_soft-paste_porcelain_-_Wadsworth_Atheneum_-_Hartford%2C_CT_-_DSC05417.jpg/960px-Salad_bowl%2C_Chantilly_Porcelain_Factory%2C_c._1735-1740%2C_soft-paste_porcelain_-_Wadsworth_Atheneum_-_Hartford%2C_CT_-_DSC05417.jpg"
+    "image": "/images/products/product-21.png"
   },
   {
     "id": 22,
@@ -482,7 +482,7 @@ export const PRODUCTS = [
       "Stainless steel interior",
       "Twist-lock lid handle"
     ],
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Makaronilaatikko.jpg/960px-Makaronilaatikko.jpg"
+    "image": "/images/products/product-22.png"
   },
   {
     "id": 23,
@@ -504,7 +504,7 @@ export const PRODUCTS = [
       "Keeps rotis soft and fresh",
       "Anti-rust design coating"
     ],
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Tava.JPG/960px-Tava.JPG"
+    "image": "/images/products/product-23.png"
   },
   {
     "id": 24,
@@ -526,7 +526,7 @@ export const PRODUCTS = [
       "Heavy premium stoneware",
       "Dishwasher & microwave safe"
     ],
-    "image": "/images/products/soup_bowls.jpg"
+    "image": "/images/products/product-24.png"
   },
   {
     "id": 25,
@@ -548,7 +548,7 @@ export const PRODUCTS = [
       "Comfortable composite grip",
       "Perfect weight balance"
     ],
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Chef%27s_knife.jpg/960px-Chef%27s_knife.jpg"
+    "image": "/images/products/product-25.png"
   },
   {
     "id": 26,
@@ -570,7 +570,7 @@ export const PRODUCTS = [
       "Stainless steel blades",
       "Foldable non-slip stand"
     ],
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Cooking_Mandolin_with_Carrot.jpg/960px-Cooking_Mandolin_with_Carrot.jpg"
+    "image": "/images/products/product-26.png"
   },
   {
     "id": 27,
@@ -592,7 +592,7 @@ export const PRODUCTS = [
       "Heavy-gauge stainless steel",
       "Detachable organizer ring"
     ],
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Simple_Measuring_Cup.jpg/960px-Simple_Measuring_Cup.jpg"
+    "image": "/images/products/product-27.png"
   },
   {
     "id": 28,
@@ -614,7 +614,7 @@ export const PRODUCTS = [
       "High heat-resistant heads",
       "Seamless one-piece shape"
     ],
-    "image": "/images/products/spatula_set.jpg"
+    "image": "/images/products/product-28.png"
   },
   {
     "id": 29,
@@ -636,7 +636,7 @@ export const PRODUCTS = [
       "Rubberized easy-grip",
       "Dishwasher safe design"
     ],
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Peeler_01_Pengo.jpg/960px-Peeler_01_Pengo.jpg"
+    "image": "/images/products/product-29.png"
   },
   {
     "id": 30,
@@ -658,7 +658,7 @@ export const PRODUCTS = [
       "Unpolished heavy pestle",
       "Elegant traditional item"
     ],
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/White-Mortar-and-Pestle.jpg/960px-White-Mortar-and-Pestle.jpg"
+    "image": "/images/products/product-30.png"
   },
   {
     "id": 31,
@@ -680,7 +680,7 @@ export const PRODUCTS = [
       "Triple stainless blades",
       "Strong motor base"
     ],
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Food_Processor_2.jpg/960px-Food_Processor_2.jpg"
+    "image": "/images/products/product-31.png"
   },
   {
     "id": 32,
@@ -702,7 +702,7 @@ export const PRODUCTS = [
       "3-speed control dial",
       "Overload protective switch"
     ],
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Vitamix_Blender.jpg/960px-Vitamix_Blender.jpg"
+    "image": "/images/products/product-32.png"
   },
   {
     "id": 33,
@@ -724,7 +724,7 @@ export const PRODUCTS = [
       "360 rotation power base",
       "Boil dry protection sensor"
     ],
-    "image": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Zojirushi_CD-XD30_20101026.jpg"
+    "image": "/images/products/product-33.png"
   },
   {
     "id": 34,
@@ -746,7 +746,7 @@ export const PRODUCTS = [
       "Cool touch handles",
       "Vertical storage"
     ],
-    "image": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Sandwich_toaster_open.jpg"
+    "image": "/images/products/product-34.png"
   },
   {
     "id": 35,
@@ -768,7 +768,7 @@ export const PRODUCTS = [
       "Super sharp dual blades",
       "Easy clean design"
     ],
-    "image": "/images/products/hand_blender.png"
+    "image": "/images/products/product-35.png"
   },
   {
     "id": 36,
@@ -790,7 +790,7 @@ export const PRODUCTS = [
       "Defrost/reheat selectors",
       "Slide-out crumb tray"
     ],
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Consumer_Reports_-_Hamilton_Beach_Digital_toaster.tiff/lossless-page1-960px-Consumer_Reports_-_Hamilton_Beach_Digital_toaster.tiff.png"
+    "image": "/images/products/product-36.png"
   },
   {
     "id": 37,
@@ -812,7 +812,7 @@ export const PRODUCTS = [
       "Scratch-free polishing",
       "Machine-washable reuse"
     ],
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Microfibre_cloth.jpg/960px-Microfibre_cloth.jpg"
+    "image": "/images/products/product-37.png"
   },
   {
     "id": 38,
@@ -834,7 +834,7 @@ export const PRODUCTS = [
       "Comfortable hand holdable",
       "Removes burned food debris"
     ],
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/US_Navy_090502-A-3007S-082_Army_Cpl._Edmund_Hollub_of_the_807th_Medical_Command_volunteers_in_the_kitchen_on_board_the_hospital_ship_USNS_Comfort_%28T-AH_20%29.jpg/960px-US_Navy_090502-A-3007S-082_Army_Cpl._Edmund_Hollub_of_the_807th_Medical_Command_volunteers_in_the_kitchen_on_board_the_hospital_ship_USNS_Comfort_%28T-AH_20%29.jpg"
+    "image": "/images/products/product-38.png"
   },
   {
     "id": 39,
@@ -856,7 +856,7 @@ export const PRODUCTS = [
       "Quick dry hygienic setup",
       "Anti-scratch cleaning"
     ],
-    "image": "https://upload.wikimedia.org/wikipedia/commons/b/b5/BurglaryIsrael2.jpg"
+    "image": "/images/products/product-39.png"
   },
   {
     "id": 40,
@@ -878,7 +878,7 @@ export const PRODUCTS = [
       "Fits standard sinks",
       "Easy trash cleanup"
     ],
-    "image": "/images/products/drain_strainer.png"
+    "image": "/images/products/product-40.png"
   },
   {
     "id": 41,
@@ -900,7 +900,7 @@ export const PRODUCTS = [
       "Gentle skin ingredients",
       "Lemon-fresh scent"
     ],
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Afwasmiddel.jpg/960px-Afwasmiddel.jpg"
+    "image": "/images/products/product-41.png"
   },
   {
     "id": 42,
@@ -922,6 +922,6 @@ export const PRODUCTS = [
       "Leak-free reservoir",
       "Scraper tip on back head"
     ],
-    "image": "/images/products/soap_brush.jpg"
+    "image": "/images/products/product-42.png"
   }
 ];

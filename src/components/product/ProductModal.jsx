@@ -63,8 +63,8 @@ export default function ProductModal({ productId, onClose }) {
         {/* Product Details Column */}
         <div className="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-between">
           <div>
-            <span className="text-xs uppercase tracking-widest text-brand-orange font-body font-normal block mb-2">
-              {product.category}
+            <span className="text-[13px] tracking-wide text-brand-orange font-body font-normal block mb-2">
+              {product.category.charAt(0).toUpperCase() + product.category.slice(1)}
             </span>
             <h2 className="text-3xl font-display font-semibold text-brand-dark leading-tight mb-4">
               {product.name}
@@ -75,8 +75,8 @@ export default function ProductModal({ productId, onClose }) {
 
             {product.features && product.features.length > 0 && (
               <div className="mb-8">
-                <h4 className="text-xs uppercase tracking-widest text-brand-dark font-body font-medium mb-3">
-                  Key Specifications
+                <h4 className="text-sm tracking-wide text-brand-dark font-body font-medium mb-3">
+                  Key specifications
                 </h4>
                 <ul className="space-y-2 pl-0 list-none">
                   {product.features.map((feature, i) => (
@@ -95,13 +95,13 @@ export default function ProductModal({ productId, onClose }) {
             <div className="bg-brand-blue/5 border-l-4 border-brand-orange p-4 flex gap-3 items-start">
               <MapPin className="w-5 h-5 text-brand-orange shrink-0 mt-0.5" />
               <div>
-                <p className="font-display text-sm font-medium text-brand-blue uppercase tracking-[0.15em] mb-1">
-                  How to Buy
+                <p className="font-display text-sm font-medium text-brand-blue tracking-wide mb-1">
+                  How to buy
                 </p>
                 <p className="text-sm text-brand-dark/80 leading-relaxed font-body font-normal">
                   This product is part of our in-store collection. Visit our showroom in Ghaziabad to view and purchase.
                 </p>
-                <p className="text-xs text-brand-orange font-medium mt-2 font-body tracking-wider uppercase">
+                <p className="text-xs text-brand-orange font-medium mt-2 font-body tracking-wide">
                   📍 Shop No. 12, Main Market, Ghaziabad
                 </p>
               </div>

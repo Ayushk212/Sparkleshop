@@ -77,45 +77,42 @@ export default function ReviewsPage() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
-      className="bg-brand-white min-h-screen"
+      className="bg-white min-h-screen"
     >
-      {/* Page Hero (Mini) */}
-      <section className="relative h-[45vh] w-full flex items-center justify-center bg-brand-blue text-center overflow-hidden">
-        <div className="absolute inset-0 bg-black/30" />
-        <div className="relative z-10 px-6 max-w-3xl">
-          <motion.p
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="text-xs uppercase tracking-widest font-body font-normal text-brand-orange mb-3"
-          >
-            Customer Voices
-          </motion.p>
+      {/* Section 1: Hero Banner (40vh) */}
+      <section className="relative h-[40vh] w-full flex items-center justify-center bg-[#111827] overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=2070&auto=format&fit=crop"
+          alt="Customer reviews showcase"
+          className="absolute inset-0 w-full h-full object-cover opacity-60 select-none"
+        />
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="relative z-10 text-center px-6 max-w-2xl">
           <motion.h1
-            initial={{ opacity: 0, y: 15 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
+            transition={{ duration: 0.6 }}
             className="font-display text-4xl md:text-5xl font-bold text-white mb-4"
           >
-            What Our Customers Say
+            Customer reviews
           </motion.h1>
           <motion.p
-            initial={{ opacity: 0, y: 15 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="font-body text-base text-white/80 max-w-xl mx-auto"
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="font-body text-base md:text-lg font-normal text-white/90 leading-relaxed"
           >
-            Real stories, honest feedback, and reviews from home kitchens across Ghaziabad.
+            Stories and feedback from home kitchens across Ghaziabad.
           </motion.p>
         </div>
       </section>
 
       {/* Reviews Grid Section */}
-      <section className="bg-brand-white py-20">
-        <div className="max-w-[1280px] mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="font-display text-3xl md:text-4xl font-semibold text-brand-dark">Shop Reviews</h2>
-            <p className="font-body text-base text-brand-dark/60 mt-2">
+      <section className="bg-white py-20">
+        <div className="max-w-[1280px] mx-auto px-8">
+          <div className="text-left mb-16">
+            <h2 className="font-display text-3xl md:text-[36px] font-bold text-[#111827]">Shop reviews</h2>
+            <p className="font-body text-[15px] text-gray-500 mt-2">
               Based on recent purchases in our Ghaziabad showroom
             </p>
           </div>
@@ -124,23 +121,23 @@ export default function ReviewsPage() {
             {REVIEWS.map((rev, index) => (
               <motion.div
                 key={rev.id}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-50px' }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.05 }}
-                className="bg-brand-white border border-brand-grey p-6 flex flex-col justify-between hover:shadow-lg transition-shadow duration-300"
+                className="bg-white border border-gray-200 p-8 flex flex-col justify-between hover:shadow-md transition-shadow duration-300"
               >
                 <div>
                   {/* Top Row: Avatar Initials + Name + Location */}
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-10 h-10 bg-brand-orange text-white font-body font-medium flex items-center justify-center select-none text-sm">
+                  <div className="flex items-center gap-4 mb-5">
+                    <div className="w-10 h-10 rounded-full bg-orange-100 text-[#F97316] font-body font-bold flex items-center justify-center select-none text-sm">
                       {rev.avatar}
                     </div>
                     <div>
-                      <h4 className="font-display text-base font-medium text-brand-dark leading-tight">
+                      <h4 className="font-display text-base font-bold text-[#111827] leading-tight">
                         {rev.name}
                       </h4>
-                      <p className="font-body text-xs text-brand-dark/50">
+                      <p className="font-body text-xs text-gray-500">
                         {rev.location}
                       </p>
                     </div>
@@ -153,22 +150,22 @@ export default function ReviewsPage() {
                         key={i}
                         className={`w-4 h-4 ${
                           i < rev.rating
-                            ? 'text-brand-orange fill-brand-orange'
-                            : 'text-brand-grey'
+                            ? 'text-[#F97316] fill-[#F97316]'
+                            : 'text-gray-200'
                         }`}
                       />
                     ))}
                   </div>
 
                   {/* Review Text */}
-                  <p className="font-body text-base text-brand-dark/80 leading-relaxed italic mb-6">
+                  <p className="font-body text-[15px] text-gray-600 leading-relaxed italic mb-6">
                     "{rev.review}"
                   </p>
                 </div>
 
                 {/* Bottom Metadata */}
-                <div className="border-t border-brand-grey pt-4 mt-auto flex justify-between items-center text-[11px] text-brand-dark/40 font-body">
-                  <span>Purchased: <strong className="text-brand-dark/60">{rev.product}</strong></span>
+                <div className="border-t border-gray-100 pt-4 mt-auto flex justify-between items-center text-xs text-gray-400 font-body">
+                  <span>Purchased: <strong className="text-gray-700 font-medium">{rev.product}</strong></span>
                   <span>{rev.date}</span>
                 </div>
               </motion.div>
@@ -177,51 +174,51 @@ export default function ReviewsPage() {
         </div>
       </section>
 
-      {/* App Store / Social Reviews Trust Strip */}
-      <section className="bg-brand-blue py-12 text-white">
-        <div className="max-w-[1280px] mx-auto px-6 text-center">
-          <h3 className="font-display text-lg uppercase tracking-wider text-white/60 mb-6 font-semibold">
-            Find Us On
+      {/* Trust Strip */}
+      <section className="bg-gray-50 py-12 border-t border-b border-gray-100 text-gray-800">
+        <div className="max-w-[1280px] mx-auto px-8 text-center">
+          <h3 className="font-display text-sm uppercase tracking-wider text-gray-500 mb-6 font-bold">
+            Find us on
           </h3>
           <div className="flex flex-wrap justify-center gap-4 md:gap-8">
             {/* Google Reviews */}
-            <div className="bg-white/5 border border-white/10 px-5 py-2.5 flex items-center gap-2">
-              <span className="font-body font-medium text-sm tracking-[0.15em] uppercase">Google Reviews</span>
-              <span className="text-sm text-brand-orange font-body font-medium">4.8 ⭐ · 120+ reviews</span>
+            <div className="bg-white border border-gray-200 px-6 py-3 flex items-center gap-3">
+              <span className="font-body font-bold text-sm text-[#111827]">Google Reviews</span>
+              <span className="text-sm text-[#F97316] font-body font-medium">4.8 rating · 120+ reviews</span>
             </div>
 
             {/* JustDial */}
-            <div className="bg-white/5 border border-white/10 px-5 py-2.5 flex items-center gap-2">
-              <span className="font-body font-medium text-sm tracking-[0.15em] uppercase">JustDial</span>
-              <span className="text-sm text-brand-orange font-body font-medium">4.7 ⭐ · 250+ reviews</span>
+            <div className="bg-white border border-gray-200 px-6 py-3 flex items-center gap-3">
+              <span className="font-body font-bold text-sm text-[#111827]">JustDial</span>
+              <span className="text-sm text-[#F97316] font-body font-medium">4.7 rating · 250+ reviews</span>
             </div>
 
             {/* Facebook */}
-            <div className="bg-white/5 border border-white/10 px-5 py-2.5 flex items-center gap-2">
-              <span className="font-body font-medium text-sm tracking-[0.15em] uppercase">Facebook</span>
-              <span className="text-sm text-brand-orange font-body font-medium">4.9 ⭐ · 80+ votes</span>
+            <div className="bg-white border border-gray-200 px-6 py-3 flex items-center gap-3">
+              <span className="font-body font-bold text-sm text-[#111827]">Facebook</span>
+              <span className="text-sm text-[#F97316] font-body font-medium">4.9 rating · 80+ votes</span>
             </div>
           </div>
         </div>
       </section>
 
       {/* Leave a Review CTA */}
-      <section className="bg-brand-white py-20 text-center border-t border-brand-grey">
+      <section className="bg-white py-20 text-center">
         <div className="max-w-xl mx-auto px-6">
-          <MessageSquare className="w-10 h-10 text-brand-orange mx-auto mb-4" />
-          <h2 className="font-display text-3xl font-semibold text-brand-dark mb-4">
+          <MessageSquare className="w-10 h-10 text-[#F97316] mx-auto mb-4" />
+          <h2 className="font-display text-3xl font-bold text-[#111827] mb-4">
             Loved shopping with us?
           </h2>
-          <p className="font-body text-base text-brand-dark/70 leading-relaxed mb-8">
+          <p className="font-body text-[15px] text-gray-600 leading-relaxed mb-8">
             Share your experience and help other families in Ghaziabad find great kitchenware. Your feedback keeps our standards high.
           </p>
           <a
             href="https://g.page/r/fake-google-review-url/review"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-8 py-3.5 bg-brand-orange hover:bg-brand-orange-dark text-white font-body uppercase tracking-[0.15em] text-sm font-medium transition-colors duration-200 cursor-pointer rounded-none"
+            className="inline-block px-8 py-3.5 bg-[#F97316] hover:bg-[#EA6C0A] text-white font-body tracking-wide text-sm font-medium transition-colors duration-200 cursor-pointer rounded-full"
           >
-            Leave a Google Review
+            Leave a Google review
           </a>
         </div>
       </section>

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const ProductCard = memo(function ProductCard({ product, index, onQuickView }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-50px' }}
       transition={{ duration: 0.5, delay: index * 0.05 }}
@@ -13,9 +13,9 @@ const ProductCard = memo(function ProductCard({ product, index, onQuickView }) {
       className="group cursor-pointer flex flex-col"
     >
       {/* Image Container - Square Aspect Ratio */}
-      <div className="aspect-square w-full overflow-hidden bg-brand-grey border border-brand-grey relative">
+      <div className="aspect-square w-full overflow-hidden bg-[#F9FAFB] border border-[#E5E7EB] relative rounded-none">
         {product.badge && (
-          <span className="absolute top-3 left-3 bg-brand-orange text-white text-[10px] uppercase tracking-widest px-3 py-1 font-body font-normal z-10">
+          <span className="absolute top-3 left-3 bg-[#F97316] text-white text-[11px] font-semibold tracking-wider px-3 py-1 font-body z-10">
             {product.badge}
           </span>
         )}
@@ -28,14 +28,14 @@ const ProductCard = memo(function ProductCard({ product, index, onQuickView }) {
 
       {/* Card Info */}
       <div className="pt-3 flex flex-col">
-        <p className="text-xs uppercase tracking-widest text-brand-orange font-body font-normal mb-1">
-          {product.category}
+        <p className="text-[13px] tracking-wide text-[#F97316] font-body font-semibold mb-1">
+          {product.category.charAt(0).toUpperCase() + product.category.slice(1)}
         </p>
-        <h3 className="font-display text-base md:text-lg font-medium text-brand-dark leading-tight group-hover:text-brand-orange transition-colors duration-200">
+        <h3 className="font-display text-base md:text-lg font-bold text-[#111827] leading-tight group-hover:text-[#F97316] transition-colors duration-200">
           {product.name}
         </h3>
-        <p className="font-body text-xs font-medium text-brand-dark/60 mt-2 underline underline-offset-4 hover:text-brand-orange transition-colors">
-          View Details →
+        <p className="font-body text-xs font-semibold text-gray-500 mt-2 hover:text-[#F97316] transition-colors duration-200">
+          View details →
         </p>
       </div>
     </motion.div>

@@ -8,9 +8,9 @@ const variants = {
 };
 
 const sizes = {
-  sm: 'px-4 py-2 text-sm tracking-[0.15em] uppercase',
-  md: 'px-6 py-3 text-sm tracking-[0.15em] uppercase',
-  lg: 'px-8 py-4 text-base tracking-[0.15em] uppercase',
+  sm: 'px-4 py-2 text-sm tracking-wide',
+  md: 'px-6 py-3 text-sm tracking-wide',
+  lg: 'px-8 py-4 text-base tracking-wide',
 };
 
 export default function Button({ children, variant = 'primary', size = 'md', className = '', disabled = false, onClick, ariaLabel, type = 'button' }) {

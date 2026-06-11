@@ -2,17 +2,17 @@
 
 @theme {
   --color-brand-white: #FFFFFF;
-  --color-brand-blue: #1A2B4A;
-  --color-brand-orange: #D4622A;
-  --color-brand-orange-dark: #C4541F;
-  --color-brand-blue-light: #2D4A7A;
-  --color-brand-grey: #F3F4F6;
+  --color-brand-blue: #2563EB;
+  --color-brand-blue-dark: #1D4ED8;
+  --color-brand-orange: #F97316;
+  --color-brand-orange-dark: #EA6C0A;
+  --color-brand-grey: #F9FAFB;
   --color-brand-dark: #111827;
 
   --color-border: #E5E7EB;
 
-  --font-display: "Cormorant Garamond", Georgia, serif;
-  --font-body: "EB Garamond", Georgia, serif;
+  --font-display: "Urbanist", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
 
   --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.08);
   --shadow-card-hover: 0 12px 32px rgba(0, 0, 0, 0.13);
@@ -30,19 +30,48 @@ html {
 }
 
 body {
-  font-family: 'EB Garamond', Georgia, serif;
-  font-size: 18px;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 16px;
   font-weight: 400;
-  background-color: var(--color-brand-white);
-  color: var(--color-brand-dark);
+  background-color: #FFFFFF;
+  color: #111827;
   line-height: 1.6;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-display);
+  font-family: 'Urbanist', system-ui, sans-serif;
 }
+
+/* Button Classes */
+.btn-primary {
+  background-color: #F97316;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 12px 24px;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.btn-primary:hover { background-color: #EA6C0A; }
+
+.btn-secondary {
+  background-color: #2563EB;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 12px 24px;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.btn-secondary:hover { background-color: #1D4ED8; }
 
 /* Scrollbar styling */
 ::-webkit-scrollbar {

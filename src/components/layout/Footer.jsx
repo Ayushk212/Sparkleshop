@@ -2,15 +2,15 @@ import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
-    <footer className="bg-brand-dark text-brand-white/70 pt-20 pb-8 border-t border-white/5">
-      <div className="max-w-[1280px] mx-auto px-6">
+    <footer className="bg-[#111827] text-white/70 pt-20 pb-8 border-t border-white/5">
+      <div className="max-w-[1280px] mx-auto px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 pb-16">
           {/* Column 1 — Brand */}
           <div className="flex flex-col gap-4">
-            <h3 className="font-display text-2xl font-semibold text-brand-white">
+            <h3 className="font-display text-2xl font-bold text-white">
               Sparkles of Kitchen
             </h3>
-            <p className="font-body text-sm text-brand-white/60 leading-relaxed max-w-sm">
+            <p className="font-body text-[14px] text-white/60 leading-relaxed max-w-sm">
               Premium showcase of cooking, baking, storage, and home kitchen essentials in Ghaziabad. Curated for home kitchens that deserve the best.
             </p>
             <div className="flex gap-4 mt-2">
@@ -18,7 +18,7 @@ export default function Footer() {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-white/5 hover:bg-brand-orange hover:text-white flex items-center justify-center transition-all duration-200 cursor-pointer text-white"
+                className="w-10 h-10 bg-white/5 hover:bg-[#F97316] hover:text-white flex items-center justify-center transition-all duration-200 cursor-pointer text-white"
                 aria-label="Facebook"
               >
                 <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -29,7 +29,7 @@ export default function Footer() {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-white/5 hover:bg-brand-orange hover:text-white flex items-center justify-center transition-all duration-200 cursor-pointer text-white"
+                className="w-10 h-10 bg-white/5 hover:bg-[#F97316] hover:text-white flex items-center justify-center transition-all duration-200 cursor-pointer text-white"
                 aria-label="Instagram"
               >
                 <svg className="w-5 h-5 fill-none stroke-current stroke-2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" xmlns="http://www.w3.org/2000/svg">
@@ -42,7 +42,7 @@ export default function Footer() {
                 href="https://wa.me/919876543210"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-white/5 hover:bg-brand-orange hover:text-white flex items-center justify-center transition-all duration-200 cursor-pointer text-white"
+                className="w-10 h-10 bg-white/5 hover:bg-[#F97316] hover:text-white flex items-center justify-center transition-all duration-200 cursor-pointer text-white"
                 aria-label="WhatsApp"
               >
                 <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -54,14 +54,14 @@ export default function Footer() {
 
           {/* Column 2 — Quick Links */}
           <div className="flex flex-col gap-4 md:pl-12">
-            <h4 className="font-body text-xs uppercase tracking-[0.15em] text-brand-white font-medium">
-              Quick Links
+            <h4 className="font-body text-[13px] tracking-wide text-white font-bold uppercase">
+              Quick links
             </h4>
             <ul className="flex flex-col gap-3 list-none p-0 m-0">
               <li>
                 <Link
                   to="/"
-                  className="font-body text-sm text-brand-white/60 hover:text-brand-orange transition-colors duration-200"
+                  className="font-body text-[14px] text-white/60 hover:text-[#F97316] transition-colors duration-200"
                 >
                   Home
                 </Link>
@@ -69,7 +69,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/products"
-                  className="font-body text-sm text-brand-white/60 hover:text-brand-orange transition-colors duration-200"
+                  className="font-body text-[14px] text-white/60 hover:text-[#F97316] transition-colors duration-200"
                 >
                   Products
                 </Link>
@@ -77,15 +77,15 @@ export default function Footer() {
               <li>
                 <Link
                   to="/about"
-                  className="font-body text-sm text-brand-white/60 hover:text-brand-orange transition-colors duration-200"
+                  className="font-body text-[14px] text-white/60 hover:text-[#F97316] transition-colors duration-200"
                 >
-                  About Us
+                  About
                 </Link>
               </li>
               <li>
                 <Link
                   to="/reviews"
-                  className="font-body text-sm text-brand-white/60 hover:text-brand-orange transition-colors duration-200"
+                  className="font-body text-[14px] text-white/60 hover:text-[#F97316] transition-colors duration-200"
                 >
                   Reviews
                 </Link>
@@ -93,7 +93,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/contact"
-                  className="font-body text-sm text-brand-white/60 hover:text-brand-orange transition-colors duration-200"
+                  className="font-body text-[14px] text-white/60 hover:text-[#F97316] transition-colors duration-200"
                 >
                   Contact
                 </Link>
@@ -103,25 +103,25 @@ export default function Footer() {
 
           {/* Column 3 — Contact & Showroom */}
           <div className="flex flex-col gap-4">
-            <h4 className="font-body text-xs uppercase tracking-[0.15em] text-brand-white font-medium">
-              Contact & Showroom
+            <h4 className="font-body text-[13px] tracking-wide text-white font-bold uppercase">
+              Contact & showroom
             </h4>
-            <div className="font-body text-sm space-y-3">
+            <div className="font-body text-[14px] text-white/60 space-y-3">
               <p className="leading-relaxed font-normal">
-                📍 Shop No. 12, Main Market Road,<br />
+                Shop No. 12, Main Market Road,<br />
                 Opposite Clock Tower, Ghaziabad, UP - 201001
               </p>
-              <p className="font-normal">📞 Phone: +91 98765 43210</p>
-              <p className="font-normal">✉️ Email: info@sparklesofkitchen.com</p>
-              <p className="text-brand-orange font-body font-medium text-xs tracking-wider uppercase">
-                ⏰ Daily: 10:00 AM – 8:30 PM (Closed Tuesdays)
+              <p className="font-normal">Phone: +91 98765 43210</p>
+              <p className="font-normal">Email: info@sparklesofkitchen.com</p>
+              <p className="text-[#F97316] font-body font-semibold text-[13px] tracking-wide pt-1">
+                Hours: Daily 10:00 AM – 8:30 PM (Closed Tuesdays)
               </p>
             </div>
           </div>
         </div>
 
         {/* Bottom copyright block */}
-        <div className="border-t border-white/5 pt-8 text-center text-xs text-brand-white/40 font-body">
+        <div className="border-t border-white/5 pt-8 text-center text-xs text-white/40 font-body">
           <p>© 2026 Sparkles of Kitchen. All rights reserved.</p>
         </div>
       </div>

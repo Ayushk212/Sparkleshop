@@ -102,7 +102,7 @@ export default function SearchModal() {
                   <div className="max-w-md mx-auto">
                     {searchHistory.length > 0 && (
                       <div className="mb-8">
-                        <h4 className="text-[10px] font-body font-medium uppercase tracking-widest text-brand-dark/40 mb-4">Recent Searches</h4>
+                        <h4 className="text-xs font-body font-semibold tracking-wide text-brand-dark/40 mb-4">Recent searches</h4>
                         <div className="flex flex-wrap gap-2">
                           {searchHistory.map((h, i) => (
                             <button
@@ -117,7 +117,7 @@ export default function SearchModal() {
                       </div>
                     )}
                     <div>
-                      <h4 className="text-[10px] font-body font-medium uppercase tracking-widest text-brand-dark/40 mb-4">Popular Categories</h4>
+                      <h4 className="text-xs font-body font-semibold tracking-wide text-brand-dark/40 mb-4">Popular categories</h4>
                       <div className="flex flex-wrap gap-2">
                         {['Cookware', 'Bakeware', 'Storage'].map((cat) => (
                           <button
@@ -135,7 +135,7 @@ export default function SearchModal() {
                   <div>
                     {searchResults.length > 0 ? (
                       <div>
-                        <h4 className="text-xs font-body font-medium uppercase tracking-widest text-brand-dark/40 mb-6">
+                        <h4 className="text-xs font-body font-semibold tracking-wide text-brand-dark/40 mb-6">
                           Results for "{query}"
                         </h4>
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">

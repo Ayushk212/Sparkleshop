@@ -10,7 +10,7 @@ const BADGE_STYLES = {
 export default function Badge({ label }) {
   if (!label) return null;
   return (
-    <span className={`inline-block px-3 py-1 text-[11px] font-body font-medium uppercase tracking-[0.12em] text-white rounded-[var(--radius-pill)] ${BADGE_STYLES[label] || 'bg-gray-500'}`}>
+    <span className={`inline-block px-3 py-1 text-xs font-body font-medium tracking-wide text-white rounded-[var(--radius-pill)] ${BADGE_STYLES[label] || 'bg-gray-500'}`}>
       {label}
     </span>
   );

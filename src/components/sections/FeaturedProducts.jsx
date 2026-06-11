@@ -13,19 +13,13 @@ export default function FeaturedProducts() {
   const featured = PRODUCTS.slice(0, 6);
 
   return (
-    <section className="bg-brand-white py-20 md:py-28 border-t border-brand-grey">
-      <div className="max-w-[1280px] mx-auto px-6">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <p className="text-xs uppercase tracking-widest font-body font-normal text-brand-orange mb-2">
-            Curated Selection
-          </p>
-          <h2 className="font-display text-3xl md:text-4xl font-semibold text-brand-dark">
-            Featured Products
+    <section className="bg-white py-16 md:py-24 border-t border-[#E5E7EB]">
+      <div className="max-w-[1280px] mx-auto px-8">
+        {/* Header — Left-aligned */}
+        <div className="mb-12">
+          <h2 className="font-display text-3xl md:text-[36px] font-bold text-[#111827]">
+            Featured products
           </h2>
-          <div className="flex justify-center mt-3">
-            <div className="w-[40px] h-[2px] bg-brand-orange" />
-          </div>
         </div>
 
         {/* 6-Product Grid */}
@@ -40,13 +34,13 @@ export default function FeaturedProducts() {
           ))}
         </div>
 
-        {/* See All Button */}
-        <div className="text-center">
+        {/* View All Button */}
+        <div className="flex justify-center">
           <button
             onClick={() => navigate('/products')}
-            className="px-10 py-4 bg-brand-blue hover:bg-brand-blue-light text-white font-body uppercase tracking-[0.15em] text-sm font-medium transition-all duration-200 cursor-pointer rounded-none"
+            className="btn-primary"
           >
-            See All Products
+            View all products
           </button>
         </div>
       </div>
